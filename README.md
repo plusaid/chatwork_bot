@@ -10,11 +10,10 @@ Googleアカウント
 ![動作](https://user-images.githubusercontent.com/45530161/66712756-5cfa3400-eddc-11e9-9ebe-f42982383013.gif)
 
 ### 実装手順
-1. API Tokenをコピーします  
-https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php  
+1. <a href="https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php" target="_blank">API Tokenをコピーします</a>  
 ![token](https://user-images.githubusercontent.com/45530161/66712973-91bbba80-eddf-11e9-805f-c1e1afc12d0e.png)
 
-1. API Token を [index.gs](https://github.com/hitoshi-kakihana/chatwork_bot/edit/master/index.gs)の3行目に記入してソースコードをコピーします  
+1. API Token を <a href="https://github.com/hitoshi-kakihana/chatwork_bot/edit/master/index.gs" target="_blank">index.gs</a> の3行目に記入してソースコードをコピーします  
 
 1. Google Apps Scriptを作成  
 適当なスプレッドシートを作成（名前は任意）  
@@ -32,8 +31,7 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php
 「現在のウェブアプリケーションのURL」をコピーします  
 ![jjj](https://user-images.githubusercontent.com/45530161/66713548-2a096d80-ede7-11e9-91c4-8e446b695927.png)  
 
-1. ChatWork WebHookを作成  
-https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/create.php  
+1. <a href="https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/create.php" target="_blank">ChatWork WebHookを作成</a>    
 「Webhook名」(任意の名前を入力)  
 「Webhook URL」(現在のウェブアプリケーションのURL を貼り付けます)  
 「ルームイベント」「メッセージ作成」「メッセージ更新」を選択  
@@ -42,8 +40,13 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/create.ph
 
 1. ChatWork の マイチャット ルームで文字を入力してbotが通知してくる事を確認します  
 ※通知が来ない場合は「chatwork_bot_debug」と入力することでbotが反応します  
-補足：ChatWorkは一度プロフィール画像を設定すると削除する事ができません。  
-そのため画像を設定している場合「chatwork_bot_debug」と入力することで動作確認できるようにしました。
+補足：ChatWorkは一度プロフィール画像を設定すると削除する事ができません  
+そのため画像を設定している場合「chatwork_bot_debug」と入力することで動作確認できるようにしました
+
+### 開発時注意点
+Google Apps Scriptは修正した後に保存するだけでは修正が反映されません  
+次を参考にして修正を反映する必要があります  
+<a href="https://qiita.com/YutakaArai/items/dcb14c94de1dde330fbd" target="_blank">https://qiita.com/YutakaArai/items/dcb14c94de1dde330fbd</a>
 
 ### 使用する技術
 [Google Apps Script](https://developers.google.com/apps-script/)
