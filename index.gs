@@ -16,10 +16,10 @@ function doPost(e) {
             // ChatWorkのメッセージ情報を取得します
             // メッセージを投稿したアカウントの情報も含まれます
             var getChatworkMessageJson = getChatworkMessage(webhookJson);
-
             // メッセージを投稿したアカウントのプロフィール画像が設定されていない時、「アイコン&プロフィールを設定しよう！」メッセージを送信します
-            var defaultProfielImg = "https://appdata.chatwork.com/avatar/ico_default_blue.png";
-            if (getChatworkMessageJson.account.avatar_image_url == defaultProfielImg) {
+            // (ChatWorkは一度プロフィール画像を設定すると削除する事ができません。画像を設定している場合「chatwork_bot_debug」と入力することで動作確認できます)
+            var defaultProfielImgRegex = /https:\/\/appdata.chatwork.com\/avatar\/ico_default_/;
+            if (getChatworkMessageJson.account.avatar_image_url.match(defaultProfielImgRegex) || webhookJson.webhook_event.body == 'chatwork_bot_debug') {
                 var title = "アイコン&プロフィールを設定しよう！";
                 var message = "アイコンはあなたの顔となり、覚えてもらえるチャンスです😁\n" +"円滑なコミュニケーションにも繋がりますので、\n必ず設定をお願いします。\n" + "https://liberaluni.com/yuru-community-precautions#2";
                 postChatworkMessage(webhookJson, getChatworkMessageJson, title, message)
