@@ -11,18 +11,18 @@ Googleアカウント
 ![動作](https://user-images.githubusercontent.com/45530161/66712756-5cfa3400-eddc-11e9-9ebe-f42982383013.gif)
 
 ### 実装手順
-1. API Tokenをコピーします
+1. API Tokenをコピーします    
 https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php
 ![token](https://user-images.githubusercontent.com/45530161/66712973-91bbba80-eddf-11e9-805f-c1e1afc12d0e.png)
 
-2. API Token を index.gsの3行目に記入します
+2. API Token を [index.gs](https://github.com/hitoshi-kakihana/chatwork_bot/blob/master/index.gs)の3行目に記入してソースコードをコピーします
 
 3. Google Apps Scriptを作成  
 適当なスプレッドシートを作成（名前は任意）
 ![1](https://user-images.githubusercontent.com/45530161/66713135-aef18880-ede1-11e9-8641-ab28dbffc7c8.png)
 
 
-スクリプトエディタに 「2. API Token を index.gsの3行目に記入します」を貼り付けます    
+スクリプトエディタに 2でコピーしたソースコードを貼り付けます    
 「保存」アイコンをクリック    
 「プロジェクト名の編集」（任意の名前を記入）OKをクリック    
 「ウェブアプリケーションとして導入」をクリック
