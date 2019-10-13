@@ -41,9 +41,9 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/create.ph
 ![webhook](https://user-images.githubusercontent.com/45530161/66713685-bd8f6e00-ede8-11e9-9195-a2f066a3cca4.png)  
 
 1. ChatWork の マイチャット ルームで文字を入力してbotが通知してくる事を確認します  
-※通知が来ない場合は次の画像をダウンロードしてプロフィール画像に設定してください。画像名を変更してはいけません  
+※通知が来ない場合は次の画像をダウンロードしてプロフィール画像に設定してください。  
+画像名を変更してはいけません  
 ![webhook](https://github.com/hitoshi-kakihana/chatwork_bot/blob/master/ico_default_blue.png)
-
 
 ### 使用する技術
 [Google Apps Script](https://developers.google.com/apps-script/)
