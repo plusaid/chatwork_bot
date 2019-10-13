@@ -37,6 +37,10 @@ Googleアカウント
 「ルームイベント」「メッセージ作成」「メッセージ更新」を選択  
 「ルームID」（ChatWorkの　マイチャット のURLの末尾の数字を入力します)  
 ![webhook](https://user-images.githubusercontent.com/45530161/66713685-bd8f6e00-ede8-11e9-9195-a2f066a3cca4.png)  
+「トークン」をコピーして<a href="https://github.com/hitoshi-kakihana/chatwork_bot/edit/master/index.gs" target="_blank">index.gs</a> の8行目に記入します　Googleスプレッドシートのスクリプトエディタに直接貼り付けてください  
+保存するときは「開発時注意点」を参考に修正を反映してください  
+ (3行目に記入したAPI Tokenを消さないように注意してください)
+![Webhookの編集   Chatwork](https://user-images.githubusercontent.com/45530161/66716487-2e468280-ee09-11e9-91e4-4b30fcf802cd.png)
 
 1. ChatWork の マイチャット ルームで文字を入力してbotが通知してくる事を確認します  
 ※通知が来ない場合は「chatwork_bot_debug」と入力することでbotが反応します  
