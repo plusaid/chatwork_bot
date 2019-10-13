@@ -25,13 +25,11 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/api/token.php
 「プロジェクト名の編集」（任意の名前を記入）OKをクリック  
 「ウェブアプリケーションとして導入」をクリック  
 ![2](https://user-images.githubusercontent.com/45530161/66713205-7bfbc480-ede2-11e9-9f79-81a7520fc01f.png)  
-
 「プロジェクトバージョン」(任意の名前を入力)  
 「次のユーザーとしてアプリケーションを実行」(自分のgmailを選択)  
 「アプリケーションにアクセスできるユーザー」(全員 匿名ユーザーを含むを選択)  
 「導入」をクリック  
 ![aaa](https://user-images.githubusercontent.com/45530161/66713341-a3539100-ede4-11e9-9723-6f0378578156.png)  
-
 「現在のウェブアプリケーションのURL」をコピーします  
 ![jjj](https://user-images.githubusercontent.com/45530161/66713548-2a096d80-ede7-11e9-91c4-8e446b695927.png)  
 
@@ -44,7 +42,9 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/create.ph
 ![webhook](https://user-images.githubusercontent.com/45530161/66713685-bd8f6e00-ede8-11e9-9195-a2f066a3cca4.png)  
 
 1. ChatWork の マイチャット ルームで文字を入力してbotが通知してくる事を確認します  
-※通知が来ない場合はプロフィール画像の  
+※通知が来ない場合は次の画像をダウンロードしてプロフィール画像に設定してください（画像名を変更してはいけません）
+![webhook](https://github.com/hitoshi-kakihana/chatwork_bot/blob/master/ico_default_blue.png)
+
 
 ### 使用する技術
 [Google Apps Script](https://developers.google.com/apps-script/)
