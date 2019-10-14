@@ -30,7 +30,7 @@ function doPost(e) {
             // ChatWorkのメッセージ情報を取得します
             // メッセージを投稿したアカウントの情報も含まれます
             var getChatworkMessageJson = getChatworkMessage(webhookJson);
-            // メッセージを投稿したアカウントのプロフィール画像が設定されていない時、「アイコン&プロフィールを設定しよう！」メッセージを送信します
+            // メッセージを投稿したアカウントのプロフィール画像が設定されていない時、「プロフ設定してないと発言禁止なので早めに設定してね〜 ^_^」メッセージを送信します
             // (ChatWorkは一度プロフィール画像を設定すると削除する事ができません。画像を設定している場合「chatwork_bot_debug」と入力することで動作確認できます)
             var defaultProfielImgRegex = /https:\/\/appdata.chatwork.com\/avatar\/ico_default_/;
             if (getChatworkMessageJson.account.avatar_image_url.match(defaultProfielImgRegex) || webhookJson.webhook_event.body == 'chatwork_bot_debug') {
