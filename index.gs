@@ -25,7 +25,7 @@ function doPost(e) {
         var webhookJson = JSON.parse(contents);
 
         // 無限ループを回避する為の対処
-        var roopBlock = webhookJson.webhook_event.body.match(/アイコン\&プロフィールを設定しよう！/);
+        var roopBlock = webhookJson.webhook_event.body.match(/プロフ設定してないと発言禁止なので早めに設定してね〜 \^_\^/);
         if (!roopBlock) {
             // ChatWorkのメッセージ情報を取得します
             // メッセージを投稿したアカウントの情報も含まれます
