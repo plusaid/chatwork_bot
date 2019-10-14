@@ -63,7 +63,7 @@ function getChatworkMessage(webhookJson) {
 function postChatworkMessage(webhookJson, getChatworkMessageJson, title, message) {
     // ChatWorkのメッセージ記法を利用してチャットに表示される文言を装飾します
     // メッセージ記法 : http://developer.chatwork.com/ja/messagenotation.html
-    var message = "[rp aid={" + getChatworkMessageJson.account.account_id + "} to={" + webhookJson.webhook_event.room_id + "}-{" + webhookJson.webhook_event.message_id + "}][info][title]" + title + "[/title]" + message + "[/info]"
+    var message = "[rp aid=" + getChatworkMessageJson.account.account_id + " to=" + webhookJson.webhook_event.room_id + "-" + webhookJson.webhook_event.message_id + "][info][title]" + title + "[/title]" + message + "[/info]"
     var options = {
         "method": "post",
         "payload": {"body": message},
