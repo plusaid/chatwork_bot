@@ -25,7 +25,7 @@ function doPost(e) {
         var webhookJson = JSON.parse(contents);
 
         // 無限ループを回避する為の対処
-        var roopBlock = webhookJson.webhook_event.body.match(/プロフ設定してないと発言禁止なので早めに設定してね〜 \^_\^/);
+        var roopBlock = webhookJson.webhook_event.body.match(/プロフ設定してないと発言禁止なので設定してな〜 \^_\^/);
         if (!roopBlock) {
             // ChatWorkのメッセージ情報を取得します
             // メッセージを投稿したアカウントの情報も含まれます
@@ -34,8 +34,8 @@ function doPost(e) {
             // (ChatWorkは一度プロフィール画像を設定すると削除する事ができません。画像を設定している場合「chatwork_bot_debug」と入力することで動作確認できます)
             var defaultProfielImgRegex = /https:\/\/appdata.chatwork.com\/avatar\/ico_default_/;
             if (getChatworkMessageJson.account.avatar_image_url.match(defaultProfielImgRegex) || webhookJson.webhook_event.body == 'chatwork_bot_debug') {
-                var title = "プロフ設定してないと発言禁止なので早めに設定してね〜 ^_^";
-                var message = "プロフ設定方法はこちらから～ ^_^\n" + "https://liberaluni.com/yuru-community-precautions#2";
+                var title = "プロフ設定してないと発言禁止なので設定してな〜 ^_^";
+                var message = "ガイドラインは必ず最後まで\n目を通してな^ ^\n最低限のルールや。\nプロフ設定についても書いてるで〜\n" + "https://liberaluni.com/yuru-community-precautions#2";
                 postChatworkMessage(webhookJson, getChatworkMessageJson, title, message)
             }
         }
