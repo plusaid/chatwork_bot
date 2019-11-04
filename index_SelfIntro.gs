@@ -7,6 +7,8 @@ var chatworkToken = "";
 // https://www.chatwork.com/service/packages/chatwork/subpackages/webhook/list.php
 var webhookToken = "";
 var sheet = SpreadsheetApp.getActive().getActiveSheet();
+// 自己紹介チャットのスプレッドシートIDを設定します
+var whitelist = SpreadsheetApp.openById('').getSheetByName('ホワイトリスト');
 
 // ChatWorkに文字が入力された時に動作します
 function doPost(e) {
@@ -42,6 +44,18 @@ function doPost(e) {
 
         // 成功をスプレッドシートに記録
         sheet.appendRow(['success', new Date(), JSON.stringify(e.postData)]);
+
+        //======ホワイトリストに登録=====
+        //B行の行末を取得*getRange("B:B").createTextFinder(*)では動作しなかったため
+        var Range="B1:B"+ whitelist.getRange("B:B").getLastRow();
+      　//完全一致で検索
+        var checkres = whitelist.getRange(Range).createTextFinder(webhookJson.webhook_event.account_id).matchEntireCell(true).findNext();
+        //登録がなければホワイトリストに追加
+        if (checkres == null){
+          whitelist.appendRow([new Date(), webhookJson.webhook_event.account_id,webhookJson.webhook_event.body]);
+        }
+
+
     } catch (ex) {
         // 失敗をスプレッドシートに記録
         sheet.appendRow(['error', new Date(), ex]);
